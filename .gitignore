@@ -1,0 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+functions/node_modules
+firebase-debug.log
+functions/node_modules/
