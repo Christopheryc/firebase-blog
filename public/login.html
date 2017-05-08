@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style>
+
+
+        form.card{
+            max-width: 400px;
+            margin: 80px auto 8px auto;
+            /*padding: 24px 16px;*/
+        }
+
+        .card-context{
+            padding: 24px 16px;
+        }
+
+        .errorMsg{
+            color: red;
+        }
+
+        .card h3{
+            color: white;
+        }
+
+        .subContainer{
+            text-align: center;
+        }
+        .subContainer>P{
+            width: 240px;
+            border-bottom: dotted rgba(0,0,0,.24);
+            margin: 2px auto;
+        }
+    </style>
+</head>
+<body>
+
+<form class="card">
+    <div style="background: deepskyblue; padding: 72px 16px 16px 16px">
+        <h3>Login</h3>
+    </div>
+
+    <div class="card-context">
+        <div class="input-field">
+            <input type="email" id="loginEmail">
+            <label for="loginEmail">user</label>
+        </div>
+
+        <div class="input-field">
+            <input type="password" id="loginPassword">
+            <label for="loginPassword">password</label>
+        </div>
+
+        <p class="errorMsg"></p>
+
+        <button class="btn waves-effect waves-light" type="button" onclick="login()">Login</button>
+        <a class="btn waves-effect waves-light" href="/">Cancel</a>
+
+    </div>
+
+
+
+
+</form>
+
+<div class="subContainer">
+    <p> Login with </p>
+    <button class="btn " onclick="loginWithGoogle()" style="margin-top: 8px">Google SignIn</button>
+</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    const config = {
+        apiKey: "AIzaSyCeRp-peBoUwmkBKX05OkjR1_ep1_PP9WE",
+        authDomain: "blog-b0231.firebaseapp.com",
+        databaseURL: "https://blog-b0231.firebaseio.com",
+        projectId: "blog-b0231",
+        storageBucket: "blog-b0231.appspot.com",
+        messagingSenderId: "481702136367"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+<script type="text/javascript" rel="script" src="js/login.js"></script>
+
+</body>
+</html>
